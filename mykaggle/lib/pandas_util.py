@@ -7,7 +7,7 @@ def change_column_name(df: Union[pd.DataFrame, pd.Series],
                        new: Union[str, List[str]]) -> pd.DataFrame:
     if isinstance(df, pd.Series):
         df = df.to_frame()
-    if isinstance(old, str) and isinstance(new, str):
+    if not isinstance(old, list) and not isinstance(new, list):
         return df.rename(columns={old: new})
 
     name_map = {}

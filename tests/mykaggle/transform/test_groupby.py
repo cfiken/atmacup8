@@ -1,7 +1,7 @@
 from pytest import approx
 import pandas as pd
 
-from mykaggle.transform.groupby import BaseGroupByTransform, GroupByTransform
+from mykaggle.transform.groupby import BaseGroupByTransform, BasicGroupByTransform
 
 
 class TestBaseGroupByTransform:
@@ -20,7 +20,7 @@ class TestBaseGroupByTransform:
         assert expected_columns == columns
 
 
-class TestGroupByTransform:
+class TestBasicGroupByTransform:
 
     def test_aggregate(self):
         df = pd.read_csv('./tests/data/dummy.csv')
@@ -37,7 +37,7 @@ class TestGroupByTransform:
         sum_y_groupby_a_b_1 = 0.4 + 0.1 + 0.2
         sum_y_groupby_a_b_2 = 0.3
 
-        transform = GroupByTransform(keys, targets, aggs)
+        transform = BasicGroupByTransform(keys, targets, aggs)
         df_output = transform.aggregate(df, keys, targets, aggs)
 
         assert df_output.columns.tolist() == keys + expected_columns
