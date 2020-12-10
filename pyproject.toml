@@ -30,6 +30,7 @@ pandas-profiling = "*"
 boto3 = "*"
 python-dotenv = "^0.15.0"
 guruguru = "^0.1.1"
+texthero = "^1.0.9"
 
 
 [tool.poetry.dev-dependencies]
