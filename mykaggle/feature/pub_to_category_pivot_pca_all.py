@@ -8,7 +8,8 @@ from mykaggle.transform.pivot import PivotTransform
 COLUMNS = [
     'Genre',
     'Platform',
-    'Year_of_Release'
+    'Year_of_Release',
+    # 'Developer'
 ]
 
 

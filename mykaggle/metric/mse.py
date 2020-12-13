@@ -14,3 +14,8 @@ def rmsle(y_pred: np.ndarray, data: lgb.Dataset) -> Tuple[str, float, bool]:
 def rmse(y_pred: np.ndarray, data: lgb.Dataset) -> Tuple[str, float, bool]:
     score = mean_squared_error(data.get_label(), y_pred) ** 0.5
     return "rmsle", score, False  # name, result, is_higher_better
+
+
+def rmse2(y_pred: np.ndarray, data: lgb.Dataset) -> Tuple[str, float, bool]:
+    score = mean_squared_error(data.get_label(), y_pred) ** 0.5
+    return "rmsle", score

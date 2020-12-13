@@ -31,6 +31,8 @@ boto3 = "*"
 python-dotenv = "^0.15.0"
 guruguru = "^0.1.1"
 texthero = "^1.0.9"
+xgboost = "^1.3.0"
+catboost = "^0.24.3"
 
 
 [tool.poetry.dev-dependencies]

@@ -208,6 +208,23 @@ version = "1.0.0"
 
 [[package]]
 category = "main"
+description = "Catboost Python Package"
+name = "catboost"
+optional = false
+python-versions = "*"
+version = "0.24.3"
+
+[package.dependencies]
+graphviz = "*"
+matplotlib = "*"
+numpy = ">=1.16.0"
+pandas = ">=0.24.0"
+plotly = "*"
+scipy = "*"
+six = "*"
+
+[[package]]
+category = "main"
 description = "Python package for providing Mozilla's CA Bundle."
 name = "certifi"
 optional = false
@@ -566,6 +583,19 @@ protobuf = ">=3.6.0"
 
 [package.extras]
 grpc = ["grpcio (>=1.0.0)"]
+
+[[package]]
+category = "main"
+description = "Simple Python interface for Graphviz"
+name = "graphviz"
+optional = false
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*"
+version = "0.15"
+
+[package.extras]
+dev = ["tox (>=3)", "flake8", "pep8-naming", "wheel", "twine"]
+docs = ["sphinx (>=1.8)", "sphinx-rtd-theme"]
+test = ["mock (>=3)", "pytest (>=4)", "pytest-mock (>=2)", "pytest-cov"]
 
 [[package]]
 category = "main"
@@ -2686,8 +2716,27 @@ optional = false
 python-versions = "*"
 version = "1.12.1"
 
+[[package]]
+category = "main"
+description = "XGBoost Python Package"
+name = "xgboost"
+optional = false
+python-versions = ">=3.6"
+version = "1.3.0.post0"
+
+[package.dependencies]
+numpy = "*"
+scipy = "*"
+
+[package.extras]
+dask = ["dask", "pandas", "distributed"]
+datatable = ["datatable"]
+pandas = ["pandas"]
+plotting = ["graphviz", "matplotlib"]
+scikit-learn = ["scikit-learn"]
+
 [metadata]
-content-hash = "c31266cd1db39fd31a61b4d0ce573fda193fd397ba976616cc838a84221bc6b9"
+content-hash = "ea3e28a6ba99cf2a3228b470417bc3f3b7d163bd4a3aff57aa27704c441dae64"
 lock-version = "1.0"
 python-versions = ">=3.8.6, <4.0.0"
 
@@ -2786,6 +2835,23 @@ cachetools = [
 catalogue = [
     {file = "catalogue-1.0.0-py2.py3-none-any.whl", hash = "sha256:584d78e7f4c3c6e2fd498eb56dfc8ef1f4ff738480237de2ccd26cbe2cf47172"},
     {file = "catalogue-1.0.0.tar.gz", hash = "sha256:d74d1d856c6b36a37bf14aa6dbbc27d0582667b7ab979a6108e61a575e8723f5"},
+]
+catboost = [
+    {file = "catboost-0.24.3-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:4d709e7408a6105219c2f6cf00bc4fb48f8903302b1ee4dfd8322224cd78003d"},
+    {file = "catboost-0.24.3-cp27-none-manylinux1_x86_64.whl", hash = "sha256:8ce7318d75080d84fecd69b85302b44a327c8aaf10b673293c7698736e3d868f"},
+    {file = "catboost-0.24.3-cp27-none-win_amd64.whl", hash = "sha256:a3615e93bb616fdbd7ca3260a7cda626e7d6085a5521a2154ce0d8b20970fa6b"},
+    {file = "catboost-0.24.3-cp35-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:0b7b0b7ea2e573f3f770de28ecae7f22ce0abcb1afe748df0e07691825a4a4fb"},
+    {file = "catboost-0.24.3-cp35-none-manylinux1_x86_64.whl", hash = "sha256:7b5006a238185f12e3962da45deb6378c30429313f903a9cf5901814f002314b"},
+    {file = "catboost-0.24.3-cp35-none-win_amd64.whl", hash = "sha256:8df0b70b791d6abbb34e50e36dc8b4dc6104decbc096f39c10d756dc8441ab6c"},
+    {file = "catboost-0.24.3-cp36-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:50a9a67632d9da017a78ec95793e3f581302833e153b9e4bdb3b45ec269686c5"},
+    {file = "catboost-0.24.3-cp36-none-manylinux1_x86_64.whl", hash = "sha256:0382ff758383880f9a2b4c2b67648dc42282b3f959d06e677b98d917a3c20d12"},
+    {file = "catboost-0.24.3-cp36-none-win_amd64.whl", hash = "sha256:d0f8402abbcdcd0816f07cc8d5cb50ce22044797f9a9a3c62bb526d0002d2a0d"},
+    {file = "catboost-0.24.3-cp37-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:253be22a3786354a6b40c4b3a9ec4c40a01f88e72fe55177c1e70e77f197363c"},
+    {file = "catboost-0.24.3-cp37-none-manylinux1_x86_64.whl", hash = "sha256:dfae16339b9292ee658afd2f98d2a87c6f8a3ad30ac20454d90ee73ac27ea644"},
+    {file = "catboost-0.24.3-cp37-none-win_amd64.whl", hash = "sha256:8aaf38052700e66b2bd1974716e2d11c8b91c63304c930c863162ba28a8dc764"},
+    {file = "catboost-0.24.3-cp38-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:6b54d6e109d76e980cd1c05772cccbd0e24bcf8d01c5be2fd97ff0e8a7ae2c72"},
+    {file = "catboost-0.24.3-cp38-none-manylinux1_x86_64.whl", hash = "sha256:c07ba6d548e7416e055010655a6234de8cc09578e977575b97b0f46c5a674b45"},
+    {file = "catboost-0.24.3-cp38-none-win_amd64.whl", hash = "sha256:b28dd19d377a18751fac1c96793d021d1ee97d48cd58b2cd57a42b68eb4e21fd"},
 ]
 certifi = [
     {file = "certifi-2020.11.8-py2.py3-none-any.whl", hash = "sha256:1f422849db327d534e3d0c5f02a263458c3955ec0aae4ff09b95f195c59f4edd"},
@@ -3028,6 +3094,10 @@ google-pasta = [
 googleapis-common-protos = [
     {file = "googleapis-common-protos-1.52.0.tar.gz", hash = "sha256:560716c807117394da12cecb0a54da5a451b5cf9866f1d37e9a5e2329a665351"},
     {file = "googleapis_common_protos-1.52.0-py2.py3-none-any.whl", hash = "sha256:c8961760f5aad9a711d37b675be103e0cc4e9a39327e0d6d857872f698403e24"},
+]
+graphviz = [
+    {file = "graphviz-0.15-py2.py3-none-any.whl", hash = "sha256:403b55553b235875fa521023a06d9c29b46f3a956f960d4e0a5b956bca9eb9ce"},
+    {file = "graphviz-0.15.zip", hash = "sha256:2b85f105024e229ec330fe5067abbe9aa0d7708921a585ecc2bf56000bf5e027"},
 ]
 grpcio = [
     {file = "grpcio-1.34.0-cp27-cp27m-macosx_10_10_x86_64.whl", hash = "sha256:e2ffa46db9103706640c74886ac23ed18d1487a8523cc128da239e1d5a4e3301"},
@@ -4343,4 +4413,11 @@ wordcloud = [
 ]
 wrapt = [
     {file = "wrapt-1.12.1.tar.gz", hash = "sha256:b62ffa81fb85f4332a4f609cab4ac40709470da05643a082ec1eb88e6d9b97d7"},
+]
+xgboost = [
+    {file = "xgboost-1.3.0.post0-py3-none-macosx_10_14_x86_64.macosx_10_15_x86_64.macosx_11_0_x86_64.whl", hash = "sha256:d5764a08bae1762bed57e3b9bbe526c0706cc505f0e4de1491b195a05c576199"},
+    {file = "xgboost-1.3.0.post0-py3-none-manylinux2010_x86_64.whl", hash = "sha256:ae89f32f9bf152177289db755ac8208c78329bcc772215767860ada5c8cedd29"},
+    {file = "xgboost-1.3.0.post0-py3-none-manylinux2014_aarch64.whl", hash = "sha256:12c32ea9dc21638a46294e78d778376cb556fbc618998c6015753542f43f73c2"},
+    {file = "xgboost-1.3.0.post0-py3-none-win_amd64.whl", hash = "sha256:67c8ca5d4152d5ef90befd4846cce6449a28f6c8093aa1bfa6e74a6a1ac33037"},
+    {file = "xgboost-1.3.0.post0.tar.gz", hash = "sha256:a0f5956add1423cf71a9ff510bf247e971dd03839f8e242793a6fa72da9ff90f"},
 ]

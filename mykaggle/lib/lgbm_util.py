@@ -24,10 +24,11 @@ def compute_importances(
 def save_importances(importances: pd.DataFrame, ckptdir: Path) -> None:
     mean_gain = importances[['gain', 'feature']].groupby('feature').mean()
     importances['mean_gain'] = importances['feature'].map(mean_gain['gain'])
-    plt.figure(figsize=(6, 8))
+    print(importances.shape)
+    plt.figure(figsize=(10, 20))
     sns.barplot(
         x='gain',
         y='feature',
-        data=importances.sort_values('mean_gain', ascending=False)[:300])
+        data=importances.sort_values('mean_gain', ascending=False)[:500])
     plt.tight_layout()
     plt.savefig(ckptdir / 'importances.png')
